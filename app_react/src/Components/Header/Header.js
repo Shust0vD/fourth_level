@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Nav, Container, Navbar } from 'react-bootstrap'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 
 import Activity from '../../Pages/Activity/Activity'
 import Map from '../../Pages/Map/Map'
@@ -12,16 +12,20 @@ export default class Header extends Component {
     render() {
         return (
             <>
-                <Router>
+                <BrowserRouter>
                     <Navbar bg="light" variant="light" className='frame_34'>
                         <Container>
                             <Nav>
-                                <Nav.Link as={Link} to='/'
-                                    className='frame_9'>Activity</Nav.Link>
-                                <Nav.Link as={Link} to='/map'
-                                    className='frame_12'>Map</Nav.Link>
-                                <Nav.Link as={Link} to='/time'
-                                    className='frame_13'>Time</Nav.Link>
+                                <NavLink to='/'
+                                    className={({ isActive }) => (isActive ? "active_link" : "frame_9")}>
+                                    <p className="activity">Activity</p>
+                                </NavLink>
+                                <NavLink to='/map'
+                                    className={({ isActive }) => (isActive ? "active_link" : "frame_12")}>
+                                    <p className="map">Map</p></NavLink>
+                                <NavLink to='/time'
+                                    className={({ isActive }) => (isActive ? "active_link" : "frame_13")}>
+                                    <p className="time">Time</p></NavLink>
                             </Nav>
                         </Container>
                     </Navbar>
@@ -31,7 +35,7 @@ export default class Header extends Component {
                         <Route exact path="/map" element={<Map />} />
                         <Route exact path="/time" element={<Time />} />
                     </Routes>
-                </Router>
+                </BrowserRouter>
             </>
         )
     }

@@ -64,6 +64,10 @@
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .active_link {
   display: flex;
   flex-direction: row;
