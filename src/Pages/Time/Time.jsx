@@ -1,47 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 import './Time.css';
 import { Card } from 'react-bootstrap';
 
-export default class Time extends Component {
-  constructor() {
-    super();
+export default function PageTime() {
+  const entryDate = localStorage.getItem('entryDate');
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
-    var entryDate = localStorage.getItem('entryDate');
-
-    this.state = {
-      startDate: entryDate,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
-  }
-
-  callMe() {
-    setInterval(() => {
-      var newToday = moment(new Date());
-      var diff = newToday.diff(this.state.startDate);
-      var diffDuration = moment.duration(diff);
-      var newHours = diffDuration.hours();
-      var newMin = diffDuration.minutes();
-      var newSec = diffDuration.seconds();
-      this.setState({ hours: newHours, minutes: newMin, seconds: newSec });
+  useEffect(() => {
+    const timer = setInterval(() => {
+      let newDate = moment(new Date());
+      let diff = newDate.diff(entryDate);
+      let diffDuration = moment.duration(diff);
+      setHours(diffDuration.hours());
+      setMinutes(diffDuration.minutes());
+      setSeconds(diffDuration.seconds());
     }, 1000);
-  }
+    return () => clearInterval(timer);
+  });
 
-  render() {
-    return (
-      <div>
-        <Card className="frame_timer">
-          <Card.Body style={{ width: '100%' }}>
-            <p className="title">Timer</p>
-            <p className="time">
-              {this.state.hours}:{this.state.minutes}:{this.state.seconds}
-            </p>
-            {this.callMe()}
-          </Card.Body>
-        </Card>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Card className="frame_timer">
+        <Card.Body style={{ width: '100%' }}>
+          <p className="title">Timer</p>
+          <p className="time">
+            {hours}:{minutes}:{seconds}
+          </p>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }

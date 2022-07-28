@@ -1,11 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
-import * as ReactDOM from 'react-dom';
 import moment from 'moment';
 
 function App() {
-  var now = moment(new Date());
-  localStorage.setItem('entryDate', now);
+  localStorage.setItem('entryDate', moment(new Date()));
 
   return (
     <div>
@@ -15,4 +13,3 @@ function App() {
 }
 
 export default App;
-ReactDOM.render(<App />, document.body);
