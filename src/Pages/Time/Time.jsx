@@ -23,9 +23,9 @@ export default function PageTime() {
 
   return (
     <div>
-      <Card className="frame_timer">
+      <Card className="time_card">
         <Card.Body style={{ width: '100%' }}>
-          <p className="title">Timer</p>
+          <p className="timer_title">Timer</p>
           <p className="time">
             {hours}:{minutes}:{seconds}
           </p>

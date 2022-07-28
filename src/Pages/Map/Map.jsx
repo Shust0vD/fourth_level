@@ -7,7 +7,7 @@ export default function PageMap() {
   const [load, setLoad] = useState(true);
 
   const YandexMap = () => (
-    <YMaps className="mapmap">
+    <YMaps className="yandex_map">
       <div>
         <Map
           onLoad={() => {
@@ -32,9 +32,9 @@ export default function PageMap() {
 
   return (
     <div>
-      <Card className="frame_map">
+      <Card className="map_card">
         <Card.Body style={{ width: '100%' }}>
-          <p className="title">Basic map</p>
+          <p className="basic_map_title">Basic map</p>
           {load && (
             <div className="preloader">
               <Spinner animation="border" variant="secondary" />

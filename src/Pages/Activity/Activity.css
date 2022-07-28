@@ -1,30 +1,29 @@
 @media screen and (max-width: 712px) {
-  .cards {
-    flex-direction: column !important;
+  #main {
+    flex-direction: column;
   }
 
-  .frame_16 {
-    width: 100% !important;
+  #skills_card {
+    width: 100%;
   }
 
-  .frame_20 {
-    width: 40% !important;
-    margin-top: 10px !important;
+  #profile_card {
+    width: 40%;
+    margin-top: 10px;
   }
 }
 
-
-.frame_20 {
+.profile_card {
   display: flex;
   align-items: center;
   text-align: center;
   padding: 32px 50px;
   width: 20%;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  border-width: 0px !important;
-  border-radius: 0px !important;
+  border-width: 0px;
+  border-radius: 0px;
 }
 
 .avatar {
@@ -34,7 +33,7 @@
   width: 132px;
 }
 
-.frame_18 {
+.name_job_div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +41,7 @@
   margin-top: 5px;
 }
 
-.frame_19 {
+.contacts {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,7 +50,7 @@
   gap: 8px;
 }
 
-.my_name {
+.name {
   width: 121px;
   height: 21px;
   margin: 0px;
@@ -68,7 +67,7 @@
   flex-grow: 0;
 }
 
-.developer {
+.job {
   width: 94px;
   height: 16px;
   margin: 0px;
@@ -78,29 +77,29 @@
   font-size: 14px;
   line-height: 16px;
 
-  color: #8F8F8F;
+  color: #8f8f8f;
 
   flex: none;
   order: 1;
   flex-grow: 0;
 }
 
-.frame_16 {
+.skills_card {
   text-align: center;
   padding: 32px 50px;
   width: 78%;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  border-width: 0px !important;
-  border-radius: 0px !important;
+  border-width: 0px;
+  border-radius: 0px;
 }
 
 .containerX {
   width: 100%;
   background-color: #ddd;
   box-sizing: border-box;
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem;
   max-height: 40px;
 }
 
@@ -113,12 +112,12 @@
 
 .python {
   width: 70%;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .html {
   width: 60%;
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 .js {
@@ -131,7 +130,7 @@
   background-color: #808080;
 }
 
-.my_skills {
+.my_skills_title {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 800;
@@ -147,7 +146,7 @@
   color: #505050;
 }
 
-.cards {
+.main {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -155,7 +154,7 @@
   margin: 20px;
 }
 
-.social {
+.logo_contact {
   height: 20px;
   width: 20px;
 }

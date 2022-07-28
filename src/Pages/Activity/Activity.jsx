@@ -7,10 +7,10 @@ import tg from './../../img/tg.png';
 
 export default function PageActivity() {
   return (
-    <div className="cards">
-      <Card className="frame_16">
+    <div className="main" id="main">
+      <Card className="skills_card" id="skills_card">
         <Card.Body>
-          <Card.Title className="my_skills">My skills</Card.Title>
+          <Card.Title className="my_skills_title">My skills</Card.Title>
           <Card.Text className="skill_name">Python, PostgreSQL, PHP</Card.Text>
           <div className="containerX">
             <div className="skills python">70%</div>
@@ -30,19 +30,19 @@ export default function PageActivity() {
         </Card.Body>
       </Card>
 
-      <Card className="frame_20">
+      <Card className="profile_card" id="profile_card">
         <Card.Body>
           <img src={avatar} className="avatar" alt="Avatar" />
-          <div className="frame_18">
-            <Card.Text className="my_name">Dmitriy Shustov</Card.Text>
-            <Card.Text className="developer">Web developer</Card.Text>
+          <div className="name_job_div">
+            <Card.Text className="name">Dmitriy Shustov</Card.Text>
+            <Card.Text className="job">Web developer</Card.Text>
           </div>
-          <div className="frame_19">
+          <div className="contacts">
             <a href="https://t.me/dimisho">
-              <img src={tg} className="social" alt="tg" />
+              <img src={tg} className="logo_contact" alt="tg" />
             </a>
             <a href="https://github.com/Shust0vD">
-              <img src={github} className="social" alt="gh" />
+              <img src={github} className="logo_contact" alt="gh" />
             </a>
           </div>
         </Card.Body>
