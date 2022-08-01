@@ -4,7 +4,6 @@ import './Time.css';
 import { Card } from 'react-bootstrap';
 
 export default function PageTime() {
-  const entryDate = localStorage.getItem('entryDate');
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
@@ -12,14 +11,14 @@ export default function PageTime() {
   useEffect(() => {
     const timer = setInterval(() => {
       let newDate = moment(new Date());
-      let diff = newDate.diff(entryDate);
+      let diff = newDate.diff(localStorage.getItem('entryDate'));
       let diffDuration = moment.duration(diff);
       setHours(diffDuration.hours());
       setMinutes(diffDuration.minutes());
       setSeconds(diffDuration.seconds());
     }, 1000);
     return () => clearInterval(timer);
-  });
+  }, []);
 
   return (
     <div>
