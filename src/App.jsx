@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header/Header';
+import Layout from './Components/Layout/Layout';
 import moment from 'moment';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Layout />
     </div>
   );
 }
