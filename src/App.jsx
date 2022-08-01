@@ -4,10 +4,18 @@ import moment from 'moment';
 import { useEffect } from 'react';
 
 function App() {
+  const clearLocalStorage = () => {
+    localStorage.clear();
+  };
   useEffect(() => {
     if (!localStorage.getItem('entryDate')) {
       localStorage.setItem('entryDate', moment(new Date()));
     }
+    window.addEventListener('beforeunload', clearLocalStorage, false);
+
+    return () => {
+      window.removeEventListener('beforeunload', clearLocalStorage, false);
+    };
   }, []);
 
   return (
