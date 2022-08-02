@@ -1,0 +1,60 @@
+.navbar {
+  height: 40px;
+  background: #fafafa;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.inactive_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 16px;
+  gap: 8px;
+  height: 40px;
+}
+
+.activity_title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #505050;
+  margin: 0px;
+}
+
+.map_title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #505050;
+  margin: 0px;
+}
+
+.time_title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #505050;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 16px;
+  gap: 8px;
+  height: 40px;
+  background: #f1f1f1;
+}

@@ -1,0 +1,160 @@
+@media screen and (max-width: 712px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #skills_card {
+    width: 100%;
+  }
+
+  #profile_card {
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+
+.profile_card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 32px 50px;
+  width: 20%;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-width: 0px;
+  border-radius: 0px;
+}
+
+.avatar {
+  border-radius: 100px;
+  object-fit: cover;
+  height: 132px;
+  width: 132px;
+}
+
+.name_job_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  margin-top: 5px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 8px;
+}
+
+.name {
+  width: 121px;
+  height: 21px;
+  margin: 0px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #505050;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.job {
+  width: 94px;
+  height: 16px;
+  margin: 0px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #8f8f8f;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.skills_card {
+  text-align: center;
+  padding: 32px 50px;
+  width: 78%;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-width: 0px;
+  border-radius: 0px;
+}
+
+.containerX {
+  width: 100%;
+  background-color: #ddd;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  max-height: 40px;
+}
+
+.skills {
+  text-align: right;
+  padding-right: 10px;
+  line-height: 40px;
+  color: white;
+}
+
+.python {
+  width: 70%;
+  background-color: #4caf50;
+}
+
+.html {
+  width: 60%;
+  background-color: #2196f3;
+}
+
+.js {
+  width: 50%;
+  background-color: #f44336;
+}
+
+.node {
+  width: 20%;
+  background-color: #808080;
+}
+
+.my_skills_title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  color: #505050;
+}
+
+.skill_name {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #505050;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.logo_contact {
+  height: 20px;
+  width: 20px;
+}
